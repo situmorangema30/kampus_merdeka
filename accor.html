@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Accordion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("document").ready(function() {
+            $("#profile").click(function() {
+                $(".companyProfile").slideToggle("slow");
+
+            })
+            $("#visi-misi").click(function() {
+                $(".visiMisi").slideToggle("slow");
+
+            })
+            $("#deskripsi-bisnis").click(function() {
+                $(".deskripsiBisnis").slideToggle("slow");
+
+            })
+        })
+    </script>
+    <style>
+        h1 {
+            color: rgb(216, 210, 210);
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        body {
+            margin: auto;
+            background-color: rgb(21, 21, 22);
+        }
+        
+        fieldset {
+            padding: 2%;
+            margin: 10%;
+            margin-top: 1%;
+            background-color: #1f83c5;
+            border: 5px solid #c2bcbc;
+            box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.4), 0 12px 28px 0 rgba(0, 0, 0, 0.22);
+            border-radius: 20px;
+        }
+        
+        .toggle {
+            width: auto;
+            margin: auto;
+            border: 2px rgb(187, 182, 182);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(167, 71, 71, 0.315);
+            padding-bottom: 30px;
+        }
+        
+        .button {
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #8FBC8F;
+            color: white;
+            width: 100%;
+            height: 35pt;
+            cursor: pointer;
+        }
+        
+        hr {
+            border: 2px solid #DEB887;
+            border-radius: 10px;
+            margin: 25px;
+        }
+        
+        div.companyProfile,
+        div.visiMisi,
+        div.deskripsiBisnis {
+            padding: 10px;
+            text-align: justify;
+            border-radius: 5px;
+            background-color:#FFE4C4;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TUGAS 8 JS MEMBUAT ACCORDION MENGGUNAKAN JQUERY</h1>
+    <hr>
+    <fieldset>
+        <div class="container">
+            <h1>NF Computer</h1>
+            <div class="toggle">
+                <button class="button" id="profile">
+                Company Profile
+                
+            </button>
+                <div class="companyProfile">
+                    <center><img src="https://www.nurulfikri.com/wp-content/uploads/2016/08/NF-Computer-6-1-300x200.jpg" alt=""></center>
+                    <p>
+                        NF COMPUTER adalah bagian dari grup Nurul Fikri yang telah dipercaya oleh masyarakat Indonesia di bidang pendidikan dan peningkatan sumber daya manusia selama lebih dari 24 tahun. Alumni-alumninya telah berkiprah dan diakui kualitas kerja dan integritasnya
+                        oleh dunia usaha.
+                    </p>
+                    <p>
+                        NF COMPUTER dirintis sejak tahun 1994 dan merupakan sebuah lembaga di bidang pendidikan dan pelatihan IT <i> (Information Technology)</i>. Kami berkomitmen menjadi partner perusahaan Anda dalam mengembangkan kemampuan serta keahlian
+                        SDM di bidang IT. Dengan komitmen tersebut, kami mempersiapkan tim pengajar yang professional dan berpengalaman di bidang IT.
+                    </p>
+                    <p>
+                        Di <strong>Era Industri 4.0</strong> saat ini, teknologi informasi berkembang sangat cepat, oleh karena itu pengembangan sumber daya manusia di bidang IT menjadi sebuah kebutuhan yang perlu diprioritaskan. NF COMPUTER menjadi jawaban
+                        yang tepat atas kebutuhan pengembangan kompetensi IT. Sehingga kami selalu berusaha untuk terus berinovasi terhadap teknologi terbaru.
+                    </p>
+                </div>
+                <button class="button" id="visi-misi">
+                Visi & Misi
+            </button>
+                <div class="visiMisi">
+                    <dl>
+                        <dt>Visi</dt>
+                        <dd>
+                            Menjadi institusi pelatihan yang kompeten dan profesional di bidang pendidikan teknologi informasi dan komunikasi di berbagai wilayah indonesia.
+                        </dd>
+                        <dt>Misi</dt>
+                        <dd>
+                            Membangun, memelihara dan mengembangkan institusi pelatihan bisnis berdaya saing tinggi, berkarakter profesional, kompeten, mengedepankan integritas dan tanggung jawab sosial, dengan mengembangkan dan menyediakan produk produk pendidikan dan pelatihan
+                            teknologi informasi dan komunikasi prima.
+                        </dd>
+                    </dl>
+                </div>
+                <button class="button" id="deskripsi-bisnis">
+                Deskripsi Bisnis
+            </button>
+                <div class="deskripsiBisnis">
+                    <p>
+                        NF COMPUTER menyelenggarakan Pelatihan dan Pendidikan di bidang Teknologi Informasi dan Komunikasi (IT Training) yang dibagi menjadi lima produk.
+                    </p>
+                    <p>
+                        Pelatihan (training) ini dibagi dalam beberapa kategori produk yaitu :
+                    </p>
+                    <ul>
+                        <li>
+                            Public Class, merupakan short course bidang TIK (Teknologi Informasi dan Komunikasi) yang berbasis Linux maupun Windows.
+                        </li>
+                        <li>
+                            Exclusive Class, merupakan paket training yang diberikan kepada customer dengan durasi 6-8 jam perhari dengan jumlah peserta minimal 2 orang dan pelaksanaan pelatihannya di NF Computer.
+                        </li>
+                        <li>
+                            In House/In Company Training, yaitu pelatihan TIK yang dikustomisasi untuk kebutuhan perusahaan-perusahaan
+                        </li>
+                    </ul>
+                    <p>
+                        Paket bisnis khusus dibagi ke dalam beberapa kategori produk yang dikelola secara profesional oleh NF COMPUTER yaitu :
+                    </p>
+                    <ul>
+                        <li>
+                            Kerjasama Pendidikan Sekolah, yaitu Divisi khusus pendidikan sekolah dimana NF COMPUTER bekerjasama dalam hal : Kerjasama pembangunan Lab Komputer, Pengajaran Komputer dan kombinasi antara keduanya.
+                        </li>
+                        <li>
+                            Usulan Produk lain: Produk-produk yang menurut lokasi diminati oleh pasar tapi belum ada dalam daftar produk pelatihan dan pendidikan NF COMPUTER, dapat diajukan oleh cabang untuk menjadi produk yang dipertimbangkan sebagai produk dan akan menjadi bagian
+                            dari penyelenggaraan pelatiahan dan pendidikan di cabang tersebut pada periode yang dianggap tepat oleh NF COMPUTER.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+</body>
+
+</html>
